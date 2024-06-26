@@ -65,9 +65,9 @@ def load_board_state(filename):
 def main():
     board = load_board_state('toad.txt')
     if board is None:
-        board = random_state(5, 5)
+        board = random_state(10, 10)
 
-    for _ in range(5):
+    for _ in range(10):
         render(board)
         board = next_board_state(board)
         time.sleep(0.5)  # Add delay to observe changes
